@@ -1,0 +1,68 @@
+<div>
+    <form (ngSubmit)="onSubmit()" *ngIf="!showMenu">
+        <label for="mst_product_id">Product Id:</label>
+        <input type="text" id="mst_product_id" [(ngModel)]="mst_product_id" name="mst_product_id" required>
+
+        <label for="branch_id">Branch Id:</label>
+        <input type="text" id="branch_id" [(ngModel)]="branch_id" name="branch_id" required>
+
+        <label>Is set for repeat set combo?</label>
+        <input type="checkbox" id="is_for_repeat_set_combo" [(ngModel)]="is_for_repeat_set_combo" name="is_for_repeat_set_combo" required>
+
+        <button type="submit">Submit</button>       
+        
+    </form>
+
+    <div *ngIf="showMenu">
+        <h2>Set Dessert</h2>
+        <ul>
+            <li> Awesome Beginnings<br>
+                <input type="checkbox" [(ngModel)]="awesomeBeginnings">
+                <label>Required</label>
+            </li>
+            <li> Awesome Beginnings2<br>
+                <input type="checkbox" [(ngModel)]="awesomeBeginnings2">
+                <label>Required</label>
+            </li>
+            <li> (cold Brew) Gryphon Earl Grey Lavender Strawberry<br>
+                <input type="checkbox" [(ngModel)]="coldBrew">
+                <label>Required</label>
+            </li>
+            <li>Steamed Boston Lobster with Minced Garlic<br>
+                <input type="checkbox" [(ngModel)]="bostonLobster">
+                <label>Required</label>
+            </li>
+        </ul>
+
+        <h2> Set Drinks</h2>
+        <ul>
+            <li> Less Ice<br>
+                <input type="checkbox" [(ngModel)]="ice">
+                <label>Required</label>
+            </li>
+            <li> Less Oil<br>
+                <input type="checkbox" [(ngModel)]="oil">
+                <label>Required</label>
+            </li>
+            <li> Less Spicy<br>
+                <input type="checkbox" [(ngModel)]="spicy">
+                <label>Required</label>
+            </li>
+        </ul>
+
+        <h2>Mexican Set
+            <ul>
+                <li> Mexican Set<br>
+                    <input type="checkbox" [(ngModel)]="mexicanSet">
+                    <label>Required</label>
+                </li>
+            </ul>
+        </h2>
+
+        <button (click)="showSelectedItem()">Show Selected Products</button>   
+
+    </div>
+
+
+
+</div>

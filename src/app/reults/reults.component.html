@@ -1,0 +1,14 @@
+<div class="result_list-container">
+    <h2 class="heading">Menu</h2>
+
+    <ul class="product-list">
+        <li *ngFor="let item of selectedItems" class="product-item">
+            <span>
+                {{ item }}
+            </span>
+            <input type="checkbox" [checked]="true" disabled>
+        </li>        
+    </ul>
+
+    <button class="add-to-cart">Add to Cart</button>
+</div>
